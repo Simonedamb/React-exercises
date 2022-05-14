@@ -18,6 +18,15 @@ export class TodoList extends React.Component {
     });
   };
 
+  handleResetButtonList = (event) => {
+    event.preventDefault();
+    this.setState(() => {
+      return {
+        arr: [],
+      };
+    });
+  };
+
   render() {
     return (
       <div>
@@ -29,6 +38,9 @@ export class TodoList extends React.Component {
             ))}
           </ul>
           <button type="submit">Sending</button>
+          <button type="submit" onClick={this.handleResetButtonList}>
+            Reset
+          </button>
         </form>
       </div>
     );
