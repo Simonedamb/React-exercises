@@ -17,6 +17,14 @@ export class Login extends React.Component {
     });
   };
 
+  handleClick = () => {
+    this.setState({
+      username: "simone",
+      password: "ciao123",
+      remember: true,
+    });
+  };
+
   render() {
     return (
       <div>
@@ -40,6 +48,9 @@ export class Login extends React.Component {
           type="checkbox"
           checked={this.state.remember}
         ></input>
+        <div>
+          <button onClick={this.handleClick}>Click Login</button>
+        </div>
       </div>
     );
   }
