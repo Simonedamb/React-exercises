@@ -16,7 +16,7 @@ export class UcontrolledLogin extends React.Component {
   };
   handleLogIn = () => {
     this._formRef.current.elements.username.value = "simone";
-    this._formRef.current.elements.password.value = "hello345";
+    this._formRef.current.elements.password.value = "hello123";
     this._formRef.current.elements.remeber.checked = true;
   };
   render() {
