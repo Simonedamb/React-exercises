@@ -15,15 +15,15 @@ export class UcontrolledLogin extends React.Component {
     });
   };
   handleLogIn = () => {
-    this._formRef.current.elements.username.value = "simone";
-    this._formRef.current.elements.password.value = "hello345";
-    this._formRef.current.elements.remeber.checked = true;
+    this._formRef.current.elements.username.value = "";
+    this._formRef.current.elements.password.value = "";
+    this._formRef.current.elements.remeber.checked = false;
   };
   render() {
     return (
       <div>
         <form ref={this._formRef} onSubmit={this.handleFormSubmit}>
-          <input name="username" defaultValue="" />
+          <input name="username" defaultValue="simone" />
           <input name="password" type="password" />
           <input name="remember" type="checkbox" />
 
