@@ -3,6 +3,7 @@ import React from "react";
 export class TodoList extends React.Component {
   state = {
     arr: ["Hello", "Goodbye", "Good Moorning", "World"],
+    stringEmpty: "",
   };
 
   handleTodoList = (event) => {
@@ -27,6 +28,14 @@ export class TodoList extends React.Component {
     });
   };
 
+  handleRemoveItem = () => {
+    this.setState(() => {
+      return {
+        stringEmpty: this.state.arr.splice(-1),
+      };
+    });
+  };
+
   render() {
     return (
       <div>
@@ -34,7 +43,10 @@ export class TodoList extends React.Component {
           <input name="list"></input>
           <ul>
             {this.state.arr.map((name) => (
-              <li>{name}</li>
+              <li>
+                <button onClick={this.handleRemoveItem}>X</button>
+                {name}
+              </li>
             ))}
           </ul>
           <button type="submit">Sending</button>
