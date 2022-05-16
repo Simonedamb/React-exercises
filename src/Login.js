@@ -57,7 +57,14 @@ export class Login extends React.Component {
           checked={this.state.remember}
         ></input>
         <div>
-          <button onClick={this.handleClick}>Click Login</button>
+          <button
+            style={{
+              background: this.state.password.length < 8 ? "red" : "green",
+            }}
+            onClick={this.handleClick}
+          >
+            Click Login
+          </button>
           <button onClick={this.handelClickReset}>Reset</button>
         </div>
       </div>
