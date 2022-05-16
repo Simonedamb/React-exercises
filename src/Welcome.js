@@ -1,12 +1,10 @@
 import React from "react";
 import Age from "./Age";
-import Counter from "./Counter";
 
 class Welcome extends React.Component {
   render() {
     return (
-      <div>
-        <Counter />
+      <div className="welcome">
         <p>
           Welcome <strong>{this.props.name}</strong> !
         </p>
