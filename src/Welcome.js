@@ -8,12 +8,19 @@ class Welcome extends React.Component {
         <p>
           Welcome <strong>{this.props.name}</strong> !
         </p>
-        <Age age={60} name="John" />
+        {/* {this.props.age > 18 && <Age age={this.props.age} />} */}
+        {/* {this.props.age && <Age age={this.props.age} />} */}
+        {this.props.age > 18 &&
+        this.props.age < 65 &&
+        this.props.name === "John" ? (
+          <Age age={this.props.age} name={this.props.name} />
+        ) : null}
       </div>
     );
   }
 }
 Welcome.defaultProps = {
   name: "simone",
+  age: 28,
 };
 export default Welcome;
