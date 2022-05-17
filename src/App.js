@@ -6,19 +6,22 @@ import { Login } from "./Login";
 import { TodoList } from "./TodoList";
 import { UcontrolledLogin } from "./UncontrolledLogin";
 import Counter from "./Counter";
+import { Container } from "./Container";
 
 export class App extends React.Component {
   render() {
     return (
-      <div>
-        <ClickCounter />
-        <Counter />
-        <InteractiveWelcome />
-        <UcontrolledLogin />
-        <TodoList />
-        <Login />
-        <ClickTracker />
-      </div>
+      <>
+        <Container>
+          <ClickCounter />
+          <Counter />
+          <InteractiveWelcome />
+          <UcontrolledLogin />
+          <TodoList />
+          <Login />
+          <ClickTracker />
+        </Container>
+      </>
     );
   }
 }
