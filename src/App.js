@@ -12,7 +12,7 @@ export class App extends React.Component {
   render() {
     return (
       <>
-        <Container>
+        <Container title={"WELCOME REACT"}>
           <ClickCounter />
           <Counter />
           <InteractiveWelcome />
