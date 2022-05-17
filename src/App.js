@@ -24,8 +24,8 @@ export class App extends React.Component {
                   <form onSubmit={addTodo}>
                     <input name="list" type="text" />
                     <button type="submit">Submit</button>
+                    <button onClick={reset}>reset</button>
                   </form>
-                  <button onClick={reset}>Remove</button>
                   <ul>
                     {arr.map((item, index) => {
                       return (
