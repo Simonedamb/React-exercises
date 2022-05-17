@@ -7,7 +7,9 @@ import { TodoList } from "./TodoList";
 import { UcontrolledLogin } from "./UncontrolledLogin";
 import Counter from "./Counter";
 import { Container } from "./Container";
-import { LanguageContext } from "./DisplayLanguage";
+import { DisplayLanguage } from "./DisplayLanguage";
+import CounterDisplay from "./CounterDisplay";
+import { Language } from "./Language";
 
 export class App extends React.Component {
   state = {
@@ -31,9 +33,11 @@ export class App extends React.Component {
           <option value="it">ITALIANO</option>
         </select>
         <Container title={"WELCOME REACT"}>
-          <LanguageContext.Provider value={this.state.language}>
+          <DisplayLanguage.Provider value={this.state.language}>
+            <Language />
             <ClickCounter />
             <Counter />
+            <CounterDisplay />
             <InteractiveWelcome />
             <UcontrolledLogin />
             <TodoList
@@ -61,7 +65,7 @@ export class App extends React.Component {
             />
             <Login />
             <ClickTracker />
-          </LanguageContext.Provider>
+          </DisplayLanguage.Provider>
         </Container>
       </>
     );
