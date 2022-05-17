@@ -17,7 +17,29 @@ export class App extends React.Component {
           <Counter />
           <InteractiveWelcome />
           <UcontrolledLogin />
-          <TodoList />
+          <TodoList
+            render={(arr, addTodo, reset, removeTodo) => {
+              return (
+                <div>
+                  <form onSubmit={addTodo}>
+                    <input name="list" type="text" />
+                    <button type="submit">Submit</button>
+                  </form>
+                  <button onClick={reset}>Remove</button>
+                  <ul>
+                    {arr.map((item, index) => {
+                      return (
+                        <div>
+                          <li>{item}</li>
+                          <button onClick={() => removeTodo(index)}>X</button>
+                        </div>
+                      );
+                    })}
+                  </ul>
+                </div>
+              );
+            }}
+          />
           <Login />
           <ClickTracker />
         </Container>

@@ -21,10 +21,8 @@ export class TodoList extends React.Component {
 
   handleResetButtonList = (event) => {
     event.preventDefault();
-    this.setState(() => {
-      return {
-        arr: [],
-      };
+    this.setState({
+      arr: [],
     });
   };
 
@@ -39,21 +37,12 @@ export class TodoList extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleTodoList}>
-          <input name="list"></input>
-          <ul>
-            {this.state.arr.map((name) => (
-              <li>
-                <button onClick={this.handleRemoveItem}>X</button>
-                {name}
-              </li>
-            ))}
-          </ul>
-          <button type="submit">Sending</button>
-          <button type="submit" onClick={this.handleResetButtonList}>
-            Reset
-          </button>
-        </form>
+        {this.props.render(
+          this.state.arr,
+          this.handleTodoList,
+          this.handleResetButtonList,
+          this.handleRemoveItem
+        )}
       </div>
     );
   }
