@@ -41,7 +41,7 @@ export class App extends React.Component {
             <CounterDisplay />
             <InteractiveWelcome />
             <UcontrolledLogin />
-            <Sum numbers={[3, 5, 7, 9]} />
+            <Sum />
             <TodoList
               render={(arr, addTodo, reset, removeTodo) => {
                 return (
