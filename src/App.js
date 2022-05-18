@@ -8,6 +8,7 @@ import { UcontrolledLogin } from "./UncontrolledLogin";
 import Counter from "./Counter";
 import { Language } from "./Language";
 import Sum from "./Sum";
+import { GithubUser } from "./GithubUser";
 
 export function App() {
   const [showCounter, setShowCounter] = useState(true);
@@ -19,6 +20,7 @@ export function App() {
   return (
     <>
       <Language />
+      <GithubUser username="gianmarcotoso" />
       <ClickCounter />
       <InteractiveWelcome />
       <UcontrolledLogin />
