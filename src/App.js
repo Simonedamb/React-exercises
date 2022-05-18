@@ -8,7 +8,6 @@ import { UcontrolledLogin } from "./UncontrolledLogin";
 import Counter from "./Counter";
 import { Container } from "./Container";
 import { DisplayLanguage } from "./DisplayLanguage";
-import CounterDisplay from "./CounterDisplay";
 import { Language } from "./Language";
 import Sum from "./Sum";
 
@@ -38,7 +37,6 @@ export class App extends React.Component {
             <Language />
             <ClickCounter />
             <Counter />
-            <CounterDisplay />
             <InteractiveWelcome />
             <UcontrolledLogin />
             <Sum />
