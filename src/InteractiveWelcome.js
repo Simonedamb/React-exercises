@@ -9,7 +9,7 @@ export class InteractiveWelcome extends React.Component {
   render() {
     return (
       <div>
-        <Welcome name={this.props.name} />
+        <Welcome name="HELLO" />
         <input name="name" value={this.state.name}></input>
       </div>
     );
