@@ -10,6 +10,7 @@ import { Container } from "./Container";
 import { DisplayLanguage } from "./DisplayLanguage";
 import CounterDisplay from "./CounterDisplay";
 import { Language } from "./Language";
+import Sum from "./Sum";
 
 export class App extends React.Component {
   state = {
@@ -40,6 +41,7 @@ export class App extends React.Component {
             <CounterDisplay />
             <InteractiveWelcome />
             <UcontrolledLogin />
+            <Sum numbers={[3, 5, 7, 9]} />
             <TodoList
               render={(arr, addTodo, reset, removeTodo) => {
                 return (
