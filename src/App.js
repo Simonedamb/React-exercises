@@ -25,6 +25,7 @@ export function App() {
       <InteractiveWelcome />
       <UcontrolledLogin />
       <Sum />
+      <Counter />
       <TodoList
         render={(arr, addTodo, reset, removeTodo) => {
           return (

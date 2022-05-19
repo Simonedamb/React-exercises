@@ -1,20 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-function Counter({ initialValue = 0 }) {
+function useCounter(initialValue = 0) {
   const [counter, setCounter] = useState(initialValue);
 
-  useEffect(() => {
-    console.log(`counter is ${counter}`);
-  });
-
-  function onCounterChange() {
-    setCounter(counter + 1);
+  function handleCounterIncrement() {
+    setCounter((c) => c + 1);
   }
+
+  function handleCounterDecrement() {
+    setCounter((c) => c - 1);
+  }
+
+  function handleCounterReset() {
+    setCounter(initialValue);
+  }
+  return {
+    counter: counter,
+    incrementCounter: handleCounterIncrement,
+    decrementCounter: handleCounterDecrement,
+    resetCounter: handleCounterReset,
+  };
+}
+
+function Counter({ initialValue = 0 }) {
+  const { counter, incrementCounter, decrementCounter, resetCounter } =
+    useCounter(initialValue);
 
   return (
     <div>
       <h2>Counter : {counter} </h2>
-      <button onClick={onCounterChange}>Increment</button>
+      <button onClick={incrementCounter}>Increment</button>
+      <button onClick={decrementCounter}>DECREMENT</button>
+      <button onClick={resetCounter}>RESET</button>
     </div>
   );
 }
