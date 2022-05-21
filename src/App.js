@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import ClickCounter from "./ClickCounter";
-import { ClickTracker } from "./ClickTracker";
-import { InteractiveWelcome } from "./InteractiveWelcome";
-import { Login } from "./Login";
-import { TodoList } from "./TodoList";
-import { UcontrolledLogin } from "./UncontrolledLogin";
+// import ClickCounter from "./ClickCounter";
+// import { ClickTracker } from "./ClickTracker";
+// import { InteractiveWelcome } from "./InteractiveWelcome";
+// import { Login } from "./Login";
+// import { TodoList } from "./TodoList";
+// import { UcontrolledLogin } from "./UncontrolledLogin";
 import Counter from "./Counter";
-import { Language } from "./Language";
-import Sum from "./Sum";
-import { GithubUserList } from "./GithubUserList";
+// import { Language } from "./Language";
+// import Sum from "./Sum";
+// import { GithubUserList } from "./GithubUserList";
 
 export function App() {
   const [showCounter, setShowCounter] = useState(true);
@@ -19,15 +19,15 @@ export function App() {
 
   return (
     <>
-      <Language />
-      <GithubUserList />
-      <ClickCounter />
-      <InteractiveWelcome />
-      <UcontrolledLogin />
-      <Sum />
+      {/* <Language /> */}
+      {/* <GithubUserList /> */}
+      {/* <ClickCounter /> */}
+      {/* <InteractiveWelcome /> */}
+      {/* <UcontrolledLogin /> */}
+      {/* <Sum /> */}
       <Counter />
-      <TodoList
-        render={(arr, addTodo, reset, removeTodo) => {
+      {/* <TodoList */}
+      {/* render={(arr, addTodo, reset, removeTodo) => {
           return (
             <div>
               <form onSubmit={addTodo}>
@@ -48,11 +48,11 @@ export function App() {
             </div>
           );
         }}
-      />
-      <button onClick={handleToggleCounter}>Toggle Counter</button>
-      {showCounter && <Counter />}
-      <Login />
-      <ClickTracker />
+      /> */}
+      {/* <button onClick={handleToggleCounter}>Toggle Counter</button> */}
+      {/* {showCounter && <Counter />} */}
+      {/* <Login /> */}
+      {/* <ClickTracker /> */}
     </>
   );
 }
