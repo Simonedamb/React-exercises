@@ -6,6 +6,7 @@ import React, { useState } from "react";
 // import { TodoList } from "./TodoList";
 // import { UcontrolledLogin } from "./UncontrolledLogin";
 import Counter from "./Counter";
+import FilteredList from "./FilteredList";
 // import { Language } from "./Language";
 // import Sum from "./Sum";
 // import { GithubUserList } from "./GithubUserList";
@@ -26,6 +27,7 @@ export function App() {
       {/* <UcontrolledLogin /> */}
       {/* <Sum /> */}
       <Counter />
+      <FilteredList />
       {/* <TodoList */}
       {/* render={(arr, addTodo, reset, removeTodo) => {
           return (
