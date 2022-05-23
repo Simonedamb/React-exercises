@@ -5,18 +5,19 @@ import React, { useState } from "react";
 // import { Login } from "./Login";
 // import { TodoList } from "./TodoList";
 // import { UcontrolledLogin } from "./UncontrolledLogin";
-import Counter from "./Counter";
-import FilteredList from "./FilteredList";
+// import Counter from "./Counter";
+// import FilteredList from "./FilteredList";
 // import { Language } from "./Language";
 // import Sum from "./Sum";
 // import { GithubUserList } from "./GithubUserList";
+import CarDetails from "./CarDetails";
 
 export function App() {
-  const [showCounter, setShowCounter] = useState(true);
+  // const [showCounter, setShowCounter] = useState(true);
 
-  function handleToggleCounter() {
-    setShowCounter((s) => !s);
-  }
+  // function handleToggleCounter() {
+  //   setShowCounter((s) => !s);
+  // }
 
   return (
     <>
@@ -26,8 +27,15 @@ export function App() {
       {/* <InteractiveWelcome /> */}
       {/* <UcontrolledLogin /> */}
       {/* <Sum /> */}
-      <Counter />
-      <FilteredList />
+      {/* <Counter /> */}
+      <CarDetails
+        initialData={{
+          model: "",
+          year: "",
+          color: "",
+        }}
+      />
+      {/* <FilteredList /> */}
       {/* <TodoList */}
       {/* render={(arr, addTodo, reset, removeTodo) => {
           return (
