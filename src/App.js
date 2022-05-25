@@ -5,6 +5,7 @@ import { GithubUserList } from "./GithubUserList";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import UseGithubUser from "./useGithubUser";
+import GithubUser from "./GithubUser";
 
 export function App() {
   return (
@@ -23,7 +24,9 @@ export function App() {
             <Route index element={<p>Aggiungi un utente e selezionalo</p>} />
           </Route>
           <Route path="users" element={<UseGithubUser />} />
-
+          <Route>
+            <Route path="username" element={<GithubUser />} />
+          </Route>
           <Route
             path="*"
             element={
