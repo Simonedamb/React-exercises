@@ -1,5 +1,6 @@
 import { useState } from "react";
-import GithubUser from "./GithubUser";
+import { Link, Outlet } from "react-router-dom";
+import { ShowGithubUser } from "./ShowGithubUser";
 
 export function GithubUserList() {
   const [data, setData] = useState(["simonedamb"]);
@@ -18,10 +19,14 @@ export function GithubUserList() {
       <ul>
         {data.map((name) => (
           <li>
-            <GithubUser username={name} />
+            <ShowGithubUser />
+            <li>
+              <Link to="/name">{name}</Link>
+            </li>
           </li>
         ))}
       </ul>
+      <Outlet />
     </div>
   );
 }

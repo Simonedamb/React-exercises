@@ -1,10 +1,10 @@
 import React from "react";
-import { GithubUserList } from "./GithubUserList";
+import GithubUser from "./GithubUser";
 
-export const ShowGithubUser = () => {
+export const ShowGithubUser = ({ name }) => {
   return (
     <div>
-      <GithubUserList />
+      <GithubUser name={name} />
     </div>
   );
 };
