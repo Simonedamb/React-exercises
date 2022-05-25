@@ -1,4 +1,4 @@
-import { useGithubUser } from "./useGithubUser";
+import useGithubUser from "./useGithubUser";
 
 const GithubUser = ({ username }) => {
   const { data, load, err, onFetchUser } = useGithubUser(username);

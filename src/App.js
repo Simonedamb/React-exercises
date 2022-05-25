@@ -4,6 +4,7 @@ import Counter from "./Counter";
 import { GithubUserList } from "./GithubUserList";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
+import UseGithubUser from "./useGithubUser";
 
 export function App() {
   return (
@@ -11,7 +12,7 @@ export function App() {
       <Router>
         <div>
           <Link to="/Welcome">Welcome|</Link>
-          <Link to="/username">Username|</Link>
+          <Link to="/users">Username|</Link>
           <Link to="/counter">Counter|</Link>
         </div>
 
@@ -21,6 +22,7 @@ export function App() {
           <Route path="/users:/name" element={<GithubUserList />}>
             <Route index element={<p>Aggiungi un utente e selezionalo</p>} />
           </Route>
+          <Route path="users" element={<UseGithubUser />} />
 
           <Route
             path="*"
