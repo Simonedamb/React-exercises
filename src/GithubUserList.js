@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import { ShowGithubUser } from "./ShowGithubUser";
 
 export function GithubUserList() {
-  const [data, setData] = useState(["simonedamb"]);
+  const [data, setData] = useState([]);
 
   const handleAddItem = (event) => {
     event.preventDefault();

@@ -18,7 +18,10 @@ export function App() {
         <Routes>
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/counter" element={<Counter />} />
-          <Route path="/users:/name" element={<GithubUserList />} />
+          <Route path="/users:/name" element={<GithubUserList />}>
+            <Route index element={<p>Aggiungi un utente e selezionalo</p>} />
+          </Route>
+
           <Route
             path="*"
             element={
