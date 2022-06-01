@@ -3,7 +3,6 @@ import "./index.css";
 // import { App } from "./App";
 import { store } from "./state/Store";
 import { todoReduce } from "./state/todoReduce";
-import { counterState } from "./state/CounterState";
 import { nanoid } from "nanoid";
 
 // const root = document.querySelector("#root");
@@ -30,8 +29,3 @@ store.dispatch(
     completed: false,
   })
 );
-store.dispatch(counterState.actions.decrement(6));
-store.dispatch(
-  todoReduce.actions.edit({ id: nanoid(), data: { completed: true } })
-);
-store.dispatch(counterState.actions.reset());
