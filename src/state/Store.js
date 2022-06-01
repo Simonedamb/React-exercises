@@ -1,5 +1,6 @@
-import { combineReducers, createStore } from "redux";
-import { counterState } from "./CounterState";
+import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers } from "redux";
+import { counterState } from "./counterState";
 import { todoReduce } from "./todoReduce";
 
 const rootReducer = combineReducers({
@@ -7,4 +8,6 @@ const rootReducer = combineReducers({
   users: todoReduce.reducer,
 });
 
-export const store = createStore(rootReducer);
+export const store = configureStore({
+  reducer: rootReducer,
+});
